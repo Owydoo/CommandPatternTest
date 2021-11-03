@@ -8,7 +8,13 @@ import Receiver.TextFile;
 public class Main {
     public static void main(String[] args) {
         TextFileOperationExecutor textFileOperationExecutor = new TextFileOperationExecutor();
-        textFileOperationExecutor.executeOperation(new OpenTextFileOperation(new TextFile("file1.txt")));
-        textFileOperationExecutor.executeOperation(new SaveTextFileOperation(new TextFile("file2.txt")));
+        System.out.println(textFileOperationExecutor.executeOperation(new OpenTextFileOperation(new TextFile("file1.txt"))));
+        System.out.println(textFileOperationExecutor.executeOperation(new SaveTextFileOperation(new TextFile("file2.txt"))));
+
+        //Using lambda expressions in client
+        System.out.println(textFileOperationExecutor.executeOperation(() -> "Opening file file1.txt"));
+        System.out.println(textFileOperationExecutor.executeOperation(() -> "Opening file file2.txt"));
+
+        //
     }
 }

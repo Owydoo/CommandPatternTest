@@ -8,13 +8,13 @@ public class TextFile {
     }
 
     public String open(){
-        System.out.println("Opening file " + name);
+        //System.out.println("Opening file " + name);
         return "Opening file " + name;
     }
 
 
     public String save() {
-        System.out.println("Saving file " + name);
+        //System.out.println("Saving file " + name);
         return "Saving file " + name;
     }
 }
