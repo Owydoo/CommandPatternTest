@@ -2,6 +2,7 @@ package Command;
 
 import Receiver.TextFile;
 
+//Concrete Command
 public class OpenTextFileOperation implements TextFileOperation {
     private TextFile textFile;
 

@@ -5,12 +5,14 @@ import Command.SaveTextFileOperation;
 import Invoker.TextFileOperationExecutor;
 import Receiver.TextFile;
 
+//Client
 public class Main {
     public static void main(String[] args) {
         TextFileOperationExecutor textFileOperationExecutor = new TextFileOperationExecutor();
 
         System.out.println(textFileOperationExecutor.executeOperation(new OpenTextFileOperation(new TextFile("file1.txt"))));
         System.out.println(textFileOperationExecutor.executeOperation(new SaveTextFileOperation(new TextFile("file2.txt"))));
+        System.out.println(textFileOperationExecutor);
 
         //Using lambda expressions in client
         System.out.println(textFileOperationExecutor.executeOperation(() -> "Opening file file1.txt"));

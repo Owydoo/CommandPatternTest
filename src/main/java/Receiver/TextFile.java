@@ -1,5 +1,6 @@
 package Receiver;
 
+//Receiver
 public class TextFile {
     private String name;
 
